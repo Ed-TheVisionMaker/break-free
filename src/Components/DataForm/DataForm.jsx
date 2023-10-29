@@ -12,7 +12,7 @@ export default function DataForm() {
     shortTermScore: 0,
     longTermScore: 0,
   });
-  const [showBattery, setShowBattery] =useState(false)
+  const [showBattery, setShowBattery] = useState(false);
   const [shortTermPercentage, setShortTermPercentage] = useState(0);
   const [longTermPercentage, setLongTermPercentage] = useState(0);
 
@@ -28,7 +28,7 @@ export default function DataForm() {
       100;
     setShortTermPercentage(shortTermPercentage);
     setLongTermPercentage(longTermPercentage);
-    setShowBattery(true)
+    setShowBattery(true);
   }
 
   function handleHabitInput(e) {
@@ -66,7 +66,7 @@ export default function DataForm() {
   }, []);
 
   return (
-    <div className='w-full h-full flex flex-col items-center justify-center'>
+    <div className="w-full h-full flex flex-col items-center justify-center">
       <form>
         <div className="flex flex-col items-center justify-center m-3">
           <p>The habit I am breaking free from</p>
@@ -88,31 +88,30 @@ export default function DataForm() {
       <SubmitDataButton handleSubmit={handleSubmit} />
       {showBattery && (
         <>
-              <div className="m-3 bg-white text-black p-3 rounded-lg">{habitInput}</div>
-      <div
-        className={
-          "flex flex-col items-center w-[150px] h-[300px] m-3"
-        }
-      >
-        <div className={`w-1/4 h-2 border border-white`}></div>
-        <div className={`w-full h-full`}>
-          <div
-            style={{ height: `${shortTermPercentage}%` }}
-            className={`w-full flex items-center justify-center border bg-green-400`}
-          >
-            <div className={`text-black`}>{shortTermInput}</div>
+          <div className="m-3 bg-white text-black p-3 rounded-lg">
+            {habitInput}
           </div>
           <div
-            style={{ height: `${longTermPercentage}%` }}
-            className={`w-full flex items-center justify-center border bg-red-400 `}
+            className={"flex items-center w-[300px] h-[150px] m-3"}
           >
-            <div className={`text-black`}>{longTermInput}</div>
+            <div className={`flex w-full h-full`}>
+              <div
+                style={{ width: `${shortTermPercentage}%` }}
+                className={`h-full flex items-center justify-center border bg-green-400`}
+              >
+                <div className={`text-black`}>{shortTermInput}</div>
+              </div>
+              <div
+                style={{ width: `${longTermPercentage}%` }}
+                className={`h-full flex items-center justify-center border bg-red-400 `}
+              >
+                <div className={`text-black`}>{longTermInput}</div>
+              </div>
+            </div>
+            <div className={`w-2 h-1/4 border border-white`}></div>
           </div>
-        </div>
-        <div></div>
-      </div>
         </>
-)}
+      )}
       {/* <DisplayResult
         shortTermInput={shortTermInput}
         longTermInput={longTermInput}
