@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "/break-free"
+  status = 200
