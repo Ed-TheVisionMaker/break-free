@@ -1,12 +1,8 @@
 [build]
-base = "break-free/dist"
+base = "dist"
 
 [[redirects]]
 from = "/break-free/*"
-to = "/break-free"
+to = "/break-free/index.html"
 status = 200
 
-[[headers]]
-for = "/*"
-[headers.values]
-Cache-Control = "public, max-age=0, must-revalidate"
