@@ -1,0 +1,12 @@
+[build]
+base = "break-free/dist"
+
+[[redirects]]
+from = "/break-free/*"
+to = "/break-free"
+status = 200
+
+[[headers]]
+for = "/*"
+[headers.values]
+Cache-Control = "public, max-age=0, must-revalidate"
