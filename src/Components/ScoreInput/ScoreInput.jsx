@@ -7,9 +7,10 @@ export default function ScoreInput(props) {
   return (
     <div>
       <input
-        type={"number"}
-        min={"0"}
-        max={"10"}
+        className='w-1/4 text-center'
+        type="number"
+        min="0"
+        max="10"
         value={
           location === "shortTermBenefit" ? shortTermBenefit : longTermCost
         }

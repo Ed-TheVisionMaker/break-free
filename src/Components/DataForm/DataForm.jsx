@@ -66,10 +66,11 @@ export default function DataForm() {
   }, []);
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center">
-      <form>
+    <div className="w-full h-full flex flex-col items-center justify-center text-center px-6 py-12">
+      <h2 className="text-3xl w-full border-b pb-4 mb-4">BREAK FREE</h2>
+      <form className='w-full text-lg'>
         <div className="flex flex-col items-center justify-center m-3">
-          <p>The habit I am breaking free from</p>
+          <p className='w-full bg-[#ffdd99] rounded-md'>The habit I am breaking free from</p>
           <input onChange={handleHabitInput} value={habitInput} />
         </div>
         <ShortTermBenefitInput
@@ -88,12 +89,10 @@ export default function DataForm() {
       <SubmitDataButton handleSubmit={handleSubmit} />
       {showBattery && (
         <>
-          <div className="m-3 bg-white text-black p-3 rounded-lg">
+          <div className="m-3 bg-[#ffdd99] text-black text-3xl p-3 rounded-lg">
             {habitInput}
           </div>
-          <div
-            className={"flex items-center w-[300px] h-[150px] m-3"}
-          >
+          <div className={"flex items-center w-[300px] h-[150px] m-3"}>
             <div className={`flex w-full h-full`}>
               <div
                 style={{ width: `${shortTermPercentage}%` }}
@@ -112,11 +111,6 @@ export default function DataForm() {
           </div>
         </>
       )}
-      {/* <DisplayResult
-        shortTermInput={shortTermInput}
-        longTermInput={longTermInput}
-        scoreInput={scoreInput}
-      /> */}
     </div>
   );
 }
