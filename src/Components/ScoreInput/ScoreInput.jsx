@@ -5,7 +5,7 @@ export default function ScoreInput(props) {
   const { shortTermBenefit, longTermCost } = scoreInput;
 
   return (
-    <div>
+    <div className='w-full rounded-md'>
       <input
         className='w-1/4 text-center'
         type="number"

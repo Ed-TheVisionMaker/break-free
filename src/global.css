@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: 'Helvetica Neue', Arial;
+  font-family: Arial;
   line-height: 1.5;
   font-weight: 400;
 
@@ -31,13 +31,18 @@ input {
   padding: 4px 10px;
   border-radius: 6px;
   margin-top: 6px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   width: 100%;
 }
 
 input:focus-visible {
   outline: 3px solid #0056ff;
   border: 3px solid transparent
+}
+
+button:hover {
+  background-color: #ffdd99;
+
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -49,6 +54,6 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
