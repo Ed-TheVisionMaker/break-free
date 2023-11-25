@@ -66,57 +66,56 @@ export default function DataForm() {
   }, []);
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center">
-      <form>
-        <div className="flex flex-col items-center justify-center m-3">
-          <p>The habit I am breaking free from</p>
-          <input onChange={handleHabitInput} value={habitInput} />
-        </div>
-        <ShortTermBenefitInput
-          shortTermInput={shortTermInput}
-          handleShortTermInput={handleShortTermInput}
-          handleScore={handleScore}
-          scoreInput={scoreInput}
-        />
-        <LongTermCostInput
-          longTermInput={longTermInput}
-          handleLongTermInput={handleLongTermInput}
-          handleScore={handleScore}
-          scoreInput={scoreInput}
-        />
-      </form>
-      <SubmitDataButton handleSubmit={handleSubmit} />
-      {showBattery && (
-        <>
-          <div className="m-3 bg-white text-black p-3 rounded-lg">
-            {habitInput}
+    <div className="w-full flex flex-col items-center justify-center text-center">
+      <div className="w-full max-w-sm h-full flex flex-col items-center justify-center text-center">
+        <h2 className="text-3xl w-full border-[#ffdd99] border-b pt-12 pb-4">BREAK FREE</h2>
+        <form className='w-full text-lg px-6 pt-4'>
+          <div className="flex flex-col items-center justify-center m-3">
+            <p className="w-full bg-[#ffdd99] rounded-md">
+              The habit I am breaking free from
+            </p>
+            <input onChange={handleHabitInput} value={habitInput} />
           </div>
-          <div
-            className={"flex items-center w-[300px] h-[150px] m-3"}
-          >
-            <div className={`flex w-full h-full`}>
-              <div
-                style={{ width: `${shortTermPercentage}%` }}
-                className={`h-full flex items-center justify-center border bg-green-400`}
-              >
-                <div className={`text-black`}>{shortTermInput}</div>
-              </div>
-              <div
-                style={{ width: `${longTermPercentage}%` }}
-                className={`h-full flex items-center justify-center border bg-red-400 `}
-              >
-                <div className={`text-black`}>{longTermInput}</div>
+          <ShortTermBenefitInput
+            shortTermInput={shortTermInput}
+            handleShortTermInput={handleShortTermInput}
+            handleScore={handleScore}
+            scoreInput={scoreInput}
+          />
+          <LongTermCostInput
+            longTermInput={longTermInput}
+            handleLongTermInput={handleLongTermInput}
+            handleScore={handleScore}
+            scoreInput={scoreInput}
+          />
+        </form>
+        <div className='pb-4'>
+          <SubmitDataButton handleSubmit={handleSubmit} />
+        </div>
+        {showBattery && (
+          <div className="w-full flex flex-col items-center bg-[#ffdd99] ">
+            <div className="m-3 bg-[#ffa900] text-black text-3xl p-3 rounded-lg">
+              {habitInput}
+            </div>
+            <div className={"flex items-center w-[300px] h-[150px] m-3"}>
+              <div className={`flex w-full h-full`}>
+                <div
+                  style={{ width: `${shortTermPercentage}%` }}
+                  className={`h-full flex items-center justify-center border bg-green-400`}
+                >
+                  <div className={`text-black`}>{shortTermInput}</div>
+                </div>
+                <div
+                  style={{ width: `${longTermPercentage}%` }}
+                  className={`h-full flex items-center justify-center border bg-red-400 `}
+                >
+                  <div className={`text-black`}>{longTermInput}</div>
+                </div>
               </div>
             </div>
-            <div className={`w-2 h-1/4 border border-white`}></div>
           </div>
-        </>
-      )}
-      {/* <DisplayResult
-        shortTermInput={shortTermInput}
-        longTermInput={longTermInput}
-        scoreInput={scoreInput}
-      /> */}
+        )}
+      </div>
     </div>
   );
 }
