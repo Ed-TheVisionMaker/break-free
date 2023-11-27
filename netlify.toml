@@ -1,2 +1,2 @@
 [build]
-  publish = "build"  # Replace "build" with your actual build directory
+  publish = "dist"  # Replace "build" with your actual build directory
