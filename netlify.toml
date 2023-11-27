@@ -1,4 +1,2 @@
-[[redirects]]
-  from = "/*"
-  to = "/break-free"
-  status = 200
+[build]
+  publish = "build"  # Replace "build" with your actual build directory
