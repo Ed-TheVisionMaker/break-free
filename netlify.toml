@@ -1,2 +1,4 @@
-[build]
-  publish = "dist"  # Replace "build" with your actual build directory
+[[redirects]]
+  from = "/break-free/*"
+  to = "https://www.myname.com/break-free/:splat"
+  status = 301
