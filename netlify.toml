@@ -1,4 +1,0 @@
-[[redirects]]
-  from = "/break-free/*"
-  to = "https://www.edhoulcroft.com/:splat"
-  status = 301
